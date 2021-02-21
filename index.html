@@ -1,0 +1,233 @@
+<html>
+<head>
+	<title>Survey Form</title>
+	<style> 
+		body {
+			display: grid;
+			/*justify-self: center;*/
+			background-color: LightGray;
+			margin: auto 0;
+			/*display: grid;*/
+		}
+
+		#main {
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: 50px auto;
+			/*background-color: green;*/
+		}
+
+		#header {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+			grid-template-rows: 1fr;
+			background-color: rgba(26, 81, 158, 1);
+		}
+
+		header .list {
+			list-style: none;
+			margin: 10px 0px 0px -29px;
+		}
+
+		header .buttons {
+			color: red;
+			font-size: 25;
+			justify-self: end;
+			margin: 11px 10px 0px 0px;
+		}		
+
+		#container {
+			display: grid;
+			grid-template-columns: auto;
+			grid-template-rows: auto 1fr;
+			justify-items: center;
+			background-image: url("https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			width: 100%;
+		}
+
+		#title {
+			display: grid;
+			grid-template-columns: auto;
+			grid-template-rows: auto;
+			justify-items: center;
+			margin: 0px 0px 10px 0px;
+		}
+
+		#title h2 {
+			margin: 20px 0px 0px 0px;
+		}
+
+		#title h4 {
+			margin: 3px 0px 10px 0px;
+		}		
+
+
+		#wrap-form {
+			display: grid;
+			justify-items: center;
+			background-color: rgba(110, 161, 231, 0.4);
+			margin: 0px 0px 0px 0px;
+			width: 60%;
+		}
+
+		#survey-form {
+			display: grid;
+			/*align-items: center;*/
+			margin: 10px 0px 30px 0px;
+			/*background-color: rgba(110, 161, 231, 0.4);*/
+			width: 80%;
+
+		}
+
+
+
+
+
+
+
+		#comments {
+			height: 80px;
+			color: black;
+
+		}
+
+		::placeholder {
+			/*color: red;*/
+			
+
+		}
+
+
+
+
+	</style>
+</head>
+<body>
+	<main id="main">
+
+		<header id="header">
+			<ul class="list">
+				<li>FCC: Survey Form</li> 
+				<li>mywebsite.com</li> 
+			</ul>
+
+			<div class="buttons">
+				<button>Heart</button>
+				<button>Sign Up</button>
+				<button>Log In</button>
+			</div>
+
+		</header>
+
+		<div id="container">
+			<div id="title">
+				<h2>freeCodeCamp Survey Form</h2>
+				<h4>Thank you for taking the time to help us improve the platform</h4>
+			</div>
+
+			<div id="wrap-form">
+				<form id="survey-form">
+					<label for="name">Name</label>
+					<input id="name" type="text" name="name" placeholder="Enter your name" required>
+					<br>
+
+					<label for="email">Email</label>
+					<input id="email" type="email" name="email" placeholder="Enter your email" required>
+					<br>
+
+					<label for="number">Age</label>
+					<input type="number" name="" min="10" max="99" placeholder="Age">
+					<br>
+
+
+					<label for="dropdown">Which option best describes your current role?</label>
+					<select id="dropdown" name="role" required>
+						<option disabled selected value>Select Current Role</option>
+						<option value="student">Student</option>
+						<option value="job">Full Time Job</option>
+						<option value="learner">Full Time Learner</option>
+						<option value="preferNo">Prefer Not to Say</option>
+						<option value="other">Other</option>
+					</select>
+					
+
+					<div class="recommend">
+						<p>Would you recommend freeCodeCamp to a friend?</p>
+						<label>
+							<input class="input-radio" name="user-recommend" value="Definitely" type="radio" checked>
+						Definitely
+						</label><br>
+						<label>
+							<input class="input-radio" name="user-recommend" value="Maybe" type="radio">
+						Maybe
+						</label><br>
+						<label>
+							<input class="input-radio" name="user-recommend" value="Not sure" type="radio">
+						Not sure
+						</label><br>
+					</div>
+					<br>
+
+					<label for="most-like">What is your favorite feature of freeCodeCamp?
+					</label>
+					<select id="most-like" name="most-like" required>
+						<option disabled selected value>Select an option</option>
+						<option value="chalenges">Chalenges</option>
+						<option value="projects">Projects</option>
+						<option value="community">Community</option>
+						<option value="openSource">Open Source</option>
+						<option value="other">Other</option>
+						
+					</select>
+					<div>
+						<p>What would you like to see improved? <br>(Check all that apply)</p>
+						<label>
+								<input class="input-checkbox" name="prefer" value="Front-end Projects" type="checkbox">
+						Front-end Projects
+						</label><br>
+						<label>
+								<input class="input-checkbox" name="prefer" value="back-end-projects" type="checkbox">
+						Back-end Projects
+						</label><br>
+						<label>
+								<input class="input-checkbox" name="prefer" value="challenges" type="checkbox">
+						Data Visualization
+						</label><br>
+						<label>
+								<input class="input-checkbox" name="prefer" value="Front-end Projects" type="checkbox">
+						Challenges
+						</label><br>
+						<label>
+								<input class="input-checkbox" name="prefer" value="open-source-community" type="checkbox">
+						Open Source Community
+						</label><br>
+						<label>
+								<input class="input-checkbox" name="prefer" value="gitter-help-rooms" type="checkbox">
+						Gitter help rooms
+						</label><br>
+						<label>
+								<input class="input-checkbox" name="prefer" value="videos" type="checkbox">
+						Videos
+						</label><br>
+						<label>
+								<input class="input-checkbox" name="prefer" value="Front-end Projects" type="checkbox">
+							Front-end Projects
+						</label><br>
+					</div>
+					<br>
+
+					<p>Any comments or suggestions?</p>
+
+					<input id="comments" type="text" name="comments" placeholder="Enter your comments" required>
+
+					<br>
+					<button type="submit" id="submit" >Submit</button>
+				</form>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
